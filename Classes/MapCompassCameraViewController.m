@@ -12,16 +12,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	NSURL *mapUrl = [NSURL URLWithString:@"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"];
+	NSURL *mapUrl = [NSURL URLWithString:@"http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer"];
 	AGSTiledMapServiceLayer *tiledLyr = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL:mapUrl];
-    //you don't want a basemap, then you couldn't see through to the camera
-    //[self.mapView addMapLayer:tiledLyr withName:@"Tiled Layer"];
+    //3rd party sample, street labels as your augmented reality
+    [self.mapView addMapLayer:tiledLyr withName:@"Tiled Layer"];
     
     NSURL *netmapUrl = [NSURL URLWithString:@""]; // your map resource, typically points or lines
 	AGSDynamicMapServiceLayer *netLyr = [AGSDynamicMapServiceLayer dynamicMapServiceLayerWithURL:netmapUrl];
     [netLyr setImageFormat:AGSImageFormatPNG32];
     
-	[self.mapView addMapLayer:netLyr withName:@"Network Layer"];
+//	[self.mapView addMapLayer:netLyr withName:@"Network Layer"];
     UIColor *background = [UIColor clearColor];
     [self.mapView setBackgroundColor: background];
     [self.mapView setGridLineColor:background];
