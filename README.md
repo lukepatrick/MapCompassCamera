@@ -1,7 +1,9 @@
 MapCompassCamera
 ================
 
-An "augmented reality" attempt, mashing up the iPad Camera with a Map and using the compass/GPS to force the map to lock to your position.
+An "augmented reality" attempt, mashing up the iPad Camera with a Map and using the compass/GPS to force the map to lock to your position. 
+
+The [JS demonstration](https://github.com/lukepatrick/MapCompassCameraJS)
 
 ===============
 ### Prereq's:
